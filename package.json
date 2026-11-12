@@ -1,0 +1,68 @@
+{
+  "name": "[project_name]",
+  "version": "0.1.0",
+  "description": "[project_description]",
+  "homepage": "https://github.com/[username]/[repo_name]#readme",
+  "bugs": {
+    "url": "https://github.com/[username]/[repo_name]/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/[username]/[repo_name].git"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bunup",
+    "format": "oxfmt",
+    "lint": "oxlint",
+    "dev": "bunup --watch",
+    "type-check": "bun check",
+    "release": "bunx bumpp --commit --push --tag",
+    "prepare": "bun simple-git-hooks",
+    "test": "bun test",
+    "test:coverage": "bun test --coverage",
+    "test:watch": "bun test --watch"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "^1.5.2",
+    "@flue/cli": "^2.3.0",
+    "@flue/runtime": "^2.3.0",
+    "@fullsnacklab/oxfmt-config": "^2.0.3",
+    "@fullsnacklab/oxlint-config": "^0.1.1",
+    "@types/bun": "^1.4.0",
+    "bunup": "^0.16.32",
+    "oxfmt": "^0.78.0",
+    "oxlint": "^1.93.0",
+    "proper-lockfile": "^4.1.2",
+    "simple-git-hooks": "^2.13.1",
+    "ts-extras": "^2.0.0",
+    "type-fest": "^5.10.0",
+    "typescript": "^7.0.2"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.5.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "simple-git-hooks": {
+    "pre-commit": "bun run lint && bun run type-check"
+  }
+}
