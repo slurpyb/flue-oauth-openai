@@ -1,11 +1,11 @@
-import { defineConfig } from 'bunup';
+import type { DefineConfigItem } from "bunup";
 
-// https://bunup.dev/docs/guide/workspaces
+const config: DefineConfigItem = {
+    entry: "src/index.ts",
+    dts: { entry: "src/types.ts" },
+    exports: {
+        includePackageJson: true
+    }
+};
 
-export default defineConfig({
-	entry: 'src/index.ts',
-	dts: { entry: ['src/types.ts']},
-	exports: {
-		includePackageJson: true
-	}
-})
+export default config;

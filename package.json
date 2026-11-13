@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "build": "bunup",
-    "format": "oxfmt",
+    "format": "bun fmt",
     "lint": "eslint",
     "dev": "bunup --watch",
     "type-check": "bun check",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@earendil-works/pi-ai": "1.4.0",
+    "@eslint/js": "^10.0.1",
     "@flue/cli": "^2.3.0",
     "@flue/runtime": "^2.3.0",
     "@fullsnacklab/oxfmt-config": "^2.0.3",
@@ -42,7 +43,8 @@
     "simple-git-hooks": "^2.13.1",
     "ts-extras": "^2.0.0",
     "type-fest": "^5.10.0",
-    "typescript": "^6"
+    "typescript": "^6",
+    "typescript-eslint": "^8.72.2"
   },
   "peerDependencies": {
     "typescript": ">=4.5.0"

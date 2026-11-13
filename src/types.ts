@@ -14,5 +14,3 @@ export type OAuthPluginOptions = CredentialSource & {
     login?: LoginOptions;
     signal?: AbortSignal;
 };
-
-export { createPlugin } from "./plugin/index.ts";
