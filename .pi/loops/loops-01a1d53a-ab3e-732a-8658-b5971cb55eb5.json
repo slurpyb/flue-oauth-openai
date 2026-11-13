@@ -1,0 +1,20 @@
+{
+  "nextId": 5,
+  "loops": [
+    {
+      "id": "3",
+      "prompt": "Read .pi/plans/store-slice-feedback.json and report the user's decision or requested edits concisely. Follow the user's current instructions; approval of this store slice does not authorize unrelated work.",
+      "trigger": {
+        "type": "event",
+        "source": "monitor:done",
+        "filter": "{\"monitorId\":\"2\"}"
+      },
+      "status": "active",
+      "recurring": false,
+      "createdAt": 1794580300910,
+      "updatedAt": 1794580300910,
+      "expiresAt": 1794587500910,
+      "fireCount": 0
+    }
+  ]
+}

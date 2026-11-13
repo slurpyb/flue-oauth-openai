@@ -1,3 +1,2 @@
-export function greet(name: string): string {
-	return `Hello, ${name}!`
-}
+export { createPlugin } from "./plugin/index.ts";
+export type { OAuthPluginOptions } from "./types.ts";

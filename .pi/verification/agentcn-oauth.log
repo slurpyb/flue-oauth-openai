@@ -1,0 +1,3 @@
+Runtime started; registering source OAuth provider.
+Source OAuth provider registered; dispatching one real request.
+{"result":"PASS","output":"OAUTH_SOURCE_VERIFIED","elapsedMs":4908}

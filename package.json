@@ -1,15 +1,14 @@
 {
-  "name": "[project_name]",
+  "name": "@slurpyb/flue-oauth-openai",
   "version": "0.1.0",
-  "description": "[project_description]",
-  "homepage": "https://github.com/[username]/[repo_name]#readme",
+  "homepage": "https://github.com/slurpyb/flue-oauth-openai#readme",
   "bugs": {
-    "url": "https://github.com/[username]/[repo_name]/issues"
+    "url": "https://github.com/slurpyb/flue-oauth-openai/issues"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/[username]/[repo_name].git"
+    "url": "git+https://github.com/slurpyb/flue-oauth-openai.git"
   },
   "files": [
     "dist"
@@ -17,7 +16,7 @@
   "scripts": {
     "build": "bunup",
     "format": "oxfmt",
-    "lint": "oxlint",
+    "lint": "eslint",
     "dev": "bunup --watch",
     "type-check": "bun check",
     "release": "bunx bumpp --commit --push --tag",
@@ -27,20 +26,23 @@
     "test:watch": "bun test --watch"
   },
   "devDependencies": {
-    "@earendil-works/pi-ai": "^1.5.2",
+    "@earendil-works/pi-ai": "1.4.0",
     "@flue/cli": "^2.3.0",
     "@flue/runtime": "^2.3.0",
     "@fullsnacklab/oxfmt-config": "^2.0.3",
-    "@fullsnacklab/oxlint-config": "^0.1.1",
     "@types/bun": "^1.4.0",
+    "@types/proper-lockfile": "^4.1.4",
     "bunup": "^0.16.32",
+    "eslint": "^10.14.0",
+    "eslint-plugin-typefest": "^1.5.1",
+    "eslint-plugin-unicorn": "^79.0.0",
+    "eslint-typescript": "^1.1.0",
     "oxfmt": "^0.78.0",
-    "oxlint": "^1.93.0",
     "proper-lockfile": "^4.1.2",
     "simple-git-hooks": "^2.13.1",
     "ts-extras": "^2.0.0",
     "type-fest": "^5.10.0",
-    "typescript": "^7.0.2"
+    "typescript": "^6"
   },
   "peerDependencies": {
     "typescript": ">=4.5.0"
@@ -61,8 +63,13 @@
     "./package.json": "./package.json"
   },
   "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types.d.ts",
   "simple-git-hooks": {
     "pre-commit": "bun run lint && bun run type-check"
+  },
+  "dependencies": {
+    "lowdb": "^7.0.1",
+    "valibot": "^1.5.0",
+    "write-json-file": "^7.0.0"
   }
 }

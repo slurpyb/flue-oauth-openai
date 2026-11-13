@@ -4,9 +4,7 @@ import { defineConfig } from 'bunup';
 
 export default defineConfig({
 	entry: 'src/index.ts',
-	dts: { 
-		entry: 'src/types.ts'
-	},
+	dts: { entry: ['src/types.ts']},
 	exports: {
 		includePackageJson: true
 	}

@@ -1,0 +1,64 @@
+{
+  "packages": [
+    {
+      "source": "../../agents/skills",
+      "extensions": [
+        "-"
+      ]
+    },
+    {
+      "source": "../../agents/packages/architect/skills/a-philosophy-of-software-design",
+      "extensions": [
+        "-"
+      ]
+    },
+    {
+      "source": "../../agents/packages/architect",
+      "skills": [
+        "-skills/software-architecture/SKILL.md",
+        "-skills/refactoring-guru/SKILL.md",
+        "-skills/hexagonal-architecture/SKILL.md",
+        "-skills/hexagonal-advisor/SKILL.md",
+        "-skills/gamma-design-patterns/SKILL.md",
+        "-skills/domain-driven-design/SKILL.md",
+        "-skills/software-design-philosophy/SKILL.md"
+      ]
+    },
+    {
+      "source": "../../agents/packages/typescript",
+      "skills": [
+        "-skills/clean-code-in-typescript/SKILL.md",
+        "-skills/domain-analysis/SKILL.md",
+        "-skills/modeling-typescript-domains/SKILL.md",
+        "-skills/preact/SKILL.md",
+        "-skills/lazy-iteration/SKILL.md",
+        "-skills/javascript-object-reuse/SKILL.md",
+        "-skills/refactoring-typescript/SKILL.md",
+        "-skills/testing/SKILL.md",
+        "-skills/testing-strategies/SKILL.md",
+        "-skills/ts-module/SKILL.md",
+        "-skills/test-middleware/SKILL.md",
+        "-skills/typescript-contracts/SKILL.md",
+        "-skills/typescript-expert/SKILL.md",
+        "-skills/typescript-generics-workshop/SKILL.md",
+        "-skills/zod-v4/SKILL.md",
+        "-skills/zod-v4-patterns/SKILL.md",
+        "+skills/design-patterns/SKILL.md",
+        "+skills/coupling-analysis/SKILL.md",
+        "+skills/node/SKILL.md",
+        "+skills/total-typescript/SKILL.md",
+        "+skills/tree-structures/SKILL.md",
+        "+skills/typescript-advanced-types/SKILL.md",
+        "+skills/typescript-magician/SKILL.md",
+        "+skills/typescript-style-guide/SKILL.md",
+        "+skills/writing-effective-typescript/SKILL.md",
+        "+skills/interface-adapters/SKILL.md",
+        "+skills/error-handling/SKILL.md",
+        "+skills/designing-typescript-objects/SKILL.md",
+        "+skills/designing-typescript-types/SKILL.md",
+        "+skills/design-patterns-booklib-ai-skills/SKILL.md"
+      ]
+    },
+    "../../agents/packages/harness"
+  ]
+}

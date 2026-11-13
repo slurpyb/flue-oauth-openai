@@ -1,1 +1,0 @@
-export {default} from '@fullsnacklab/oxfmt-config' with { type: 'json' };

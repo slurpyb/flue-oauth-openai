@@ -1,0 +1,90 @@
+{
+  "nextId": 5,
+  "loops": [
+    {
+      "id": "3",
+      "prompt": "Read .pi/plans/store-slice-feedback.json and report the user's decision or requested edits concisely. Follow the user's current instructions; approval of this store slice does not authorize unrelated work.",
+      "trigger": {
+        "type": "event",
+        "source": "monitor:done",
+        "filter": "{\"monitorId\":\"2\"}"
+      },
+      "status": "active",
+      "recurring": false,
+      "createdAt": 1794580300910,
+      "updatedAt": 1794580300910,
+      "expiresAt": 1794587500910,
+      "fireCount": 0
+    },
+    {
+      "id": "4",
+      "prompt": "Implement the complete internal credential-store slice using library-backed persistence and Pi's native CredentialStore. Preserve createPlugin boundary and existing configuration. User has authorized implementation; no further proposals.",
+      "trigger": {
+        "type": "dynamic"
+      },
+      "status": "active",
+      "recurring": true,
+      "createdAt": 1794583041644,
+      "updatedAt": 1794583045831,
+      "expiresAt": 1794590241644,
+      "maxFires": 4,
+      "fireCount": 1,
+      "dynamic": {
+        "goal": "Implement the complete internal credential-store slice using library-backed persistence and Pi's native CredentialStore. Preserve createPlugin boundary and existing configuration. User has authorized implementation; no further proposals.",
+        "state": "implement",
+        "iteration": 0,
+        "awaitingUpdate": true,
+        "lastUpdatedAt": 1794583041690
+      },
+      "workflow": {
+        "definition": {
+          "version": 1,
+          "initialState": "implement",
+          "states": {
+            "implement": {
+              "prompt": "Implement src/store/index.ts, file.ts and schema.ts using lowdb native types, Valibot, write-json-file with 0600 and existing proper-lockfile. Cover native read/list/modify/delete, async update translation, provider extension fields, serialized fresh file snapshots and resource ownership. Keep modify focused, use genuine callback-result generics, preserve configs/exports and unrelated edits. Package additions are authorized. Do not run or discuss tests. Finish the module and report code destinations concisely.",
+              "task": {
+                "subject": "Implement credential storage",
+                "description": "Complete store adapter and persistence/schema modules. Dependencies lowdb, valibot, write-json-file and @types/proper-lockfile already added. No provider/plugin changes authorized in this slice."
+              },
+              "on": {
+                "implemented": "done"
+              }
+            },
+            "done": {
+              "prompt": "Deliver code paths and concise usage. No recap of earlier proposals.",
+              "terminal": "completed"
+            }
+          }
+        },
+        "definitionRevision": 1,
+        "revisionHistory": [],
+        "currentState": "implement",
+        "transitionSeq": 0,
+        "stateEnteredAt": 1794583041644,
+        "attemptsByState": {
+          "implement": 1
+        },
+        "stateFireCounts": {},
+        "activeExecution": {
+          "id": "implement:0",
+          "stateId": "implement",
+          "transitionSeq": 0,
+          "subject": "Implement credential storage",
+          "description": "Complete store adapter and persistence/schema modules. Dependencies lowdb, valibot, write-json-file and @types/proper-lockfile already added. No provider/plugin changes authorized in this slice.",
+          "status": "active",
+          "createdAt": 1794583041644,
+          "updatedAt": 1794583045831,
+          "lease": {
+            "ownerSessionId": "01a1d53a-ab3e-732a-8658-b5971cb55eb5",
+            "ownerRuntimeId": "bf50363b-059a-41ec-a6db-f20d23764351",
+            "acquiredAt": 1794583041644,
+            "heartbeatAt": 1794583045831,
+            "expiresAt": 1794584845831,
+            "attempt": 1
+          }
+        }
+      }
+    }
+  ]
+}

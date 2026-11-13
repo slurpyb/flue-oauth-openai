@@ -1,0 +1,1 @@
+- Dont stop working until your current task is complete. Stopping costs us potentially hours. Use you judgement and keep moving.
