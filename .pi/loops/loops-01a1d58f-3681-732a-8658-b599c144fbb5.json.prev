@@ -1,0 +1,20 @@
+{
+  "nextId": 6,
+  "loops": [
+    {
+      "id": "5",
+      "prompt": "Finish the user's commit/push request. Inspect this monitor's terminal status/output. If successful, verify local HEAD matches origin/main using git ls-remote and report the new commit hash, pushed branch, hook evidence, and that current .pi session-state changes remain uncommitted. The staged scope includes source/tests, ESLint and existing related manifest/lock/TS/build configuration changes; no .pi changes were staged. Earlier unpushed commit 436751d will also go with normal main history. Do not amend, force-push, bypass hooks or rewrite history. If it failed, inspect the exact failure and resolve only ordinary safe wiring; request user authority only for a real authentication, divergence, or signing blocker.",
+      "trigger": {
+        "type": "event",
+        "source": "monitor:done",
+        "filter": "{\"monitorId\":\"19\"}"
+      },
+      "status": "active",
+      "recurring": false,
+      "createdAt": 1794593661203,
+      "updatedAt": 1794593666728,
+      "expiresAt": 1795198461203,
+      "fireCount": 1
+    }
+  ]
+}
